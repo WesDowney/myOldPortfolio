@@ -141,11 +141,6 @@ li {
 	margin-bottom: 0;
 }
 
-#footer p {
-	
-}
-
-
 /* ================== MEDIA QUERIES ================== */
 
 @media (max-width: 768px) {
@@ -154,6 +149,22 @@ li {
     	display: block;
     	float: none;
     	margin: 0 auto;
-    	margin-bottom: 30px;
+    	margin-top: 30px;
+    }
+
+    .container {
+    	margin: 15px;
+    }
+
+    .card {
+    	margin: 0px auto 20px auto; 
+    }
+
+    .no-bottom-margin {
+    	margin-bottom: 0;
+    }
+
+    .navstyle {
+    	border-radius: 4px;
     }
 }
