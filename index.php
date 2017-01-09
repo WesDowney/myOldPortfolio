@@ -1,3 +1,12 @@
+<?php 
+
+if (isset($_POST["submit"])) {
+
+}
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,12 +16,10 @@
     <title>Wes Downey Web Development Portfolio</title>
 
     <!-- Bootstrap v4.0.0-alpha.5 with Flexbot -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" > 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" /> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/animate.css" rel="stylesheet" > 
-
-    <!-- Custom CSS --> 
-    <link href="assets/css/custom.css" rel="stylesheet"> 
+    <link href="assets/css/animate.css" rel="stylesheet" /> 
+    <link href="assets/css/custom.css" rel="stylesheet" /> 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -238,13 +245,13 @@
 
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <h2 id="bolder-headline">Contact Me</h3>
-      <form action="#" method="post"><a name="contact">
-        <div class="form-group required">
-          <input type="text" class="form-control" name="name" id="name" placeholder="Name" autocomplete="off" required>
+      <h2 id="bolder-headline">Contact Me</h3><a name="contact">
+      <form action="" method="post" id="contactme">
+        <div class="form-group">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name" autocomplete="off">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" name="company" id="company" placeholder="Company" autocomplete="off">
+          <input type="text" class="form-control " name="company" id="company" placeholder="Company" autocomplete="off">
         </div>
         <div class="form-group">
           <input type="text" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off">
@@ -263,12 +270,79 @@
 
 </div> <!-- container -->
 
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-  <script src="assets/js/custom.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+function validateEmail($email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+  return emailReg.test($email);
+}
+
+$(document).ready(function() {
+
+  function addSuccess(that) {
+    $(that).removeClass("form-control-danger").parent().removeClass("has-danger");
+    $(that).addClass("form-control-success").parent().addClass("has-success");
+  }
+
+  function addDanger(that) {
+    $(that).removeClass("form-control-success").parent().removeClass("has-success");
+    $(that).addClass("form-control-danger").parent().addClass("has-danger");
+  }
+
+  // Validate as the user completes the form
+  $("input[type=text], textarea").on("input", function() {
+    if (this.id == "email"){
+      if ((this.value) && (validateEmail(this.value))) {
+          addSuccess(this);
+      }
+      else {
+        addDanger(this);
+      }
+    } 
+    else if (this.id != "company") {
+      if ($.trim(this.value).length) {
+        addSuccess(this);
+      } else {
+        addDanger(this);
+      }
+    } 
+  });
+
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    
+    var ready = 0;
+
+    if ($.trim($("#name").val()).length) {
+      ready++;
+    } else {
+      addDanger($("#name"));
+    }
+
+    if (($("#email").val()) && (validateEmail($("#email").val()))){
+      ready++;
+    } else {
+      addDanger($("#email"));
+    }
+
+    if ($.trim($("#message").val()).length) {
+      ready++;
+    } else {
+      addDanger($("#message"));
+    }
+    
+    if (ready === 3) {
+      this.submit();
+    }
+  });
+
+});
+</script>
 
 </body>
 </html>
