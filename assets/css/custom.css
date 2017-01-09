@@ -1,3 +1,5 @@
+/* ================== GLOBAL ================== */
+
 /* Testing purposes */
 * {
 	border: 0px solid red;
@@ -12,6 +14,26 @@ body {
 	text-rendering: optimizelegibility;
 }
 
+.navstyle, #about, #me, .card {
+	border: 1px solid black;
+
+	box-shadow: 3px 3px 3px black;
+	-moz-box-shadow: 3px 3px 3px black;
+    -webkit-box-shadow: 3px 3px 3px black;
+}
+
+.row {
+	margin-bottom: 40px;
+}
+
+#bolder-headline {
+	color:white; 
+	text-align: center;
+	text-shadow: 2px 2px #000000;
+}
+
+/* ================== NAV ================== */
+
 .navstyle {
 	/* Background Colors */
 	background: white;
@@ -19,15 +41,6 @@ body {
     background: -o-linear-gradient(white, #D1CECE); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(white, #D1CECE); /* For Firefox 3.6 to 15 */
     background: linear-gradient(white, #D1CECE); /* Standard syntax */
-
-    /* Border and Shadow */
-	border: 1px solid black;
-
-	box-shadow: 3px 3px 3px black;
-	-moz-box-shadow: 3px 3px 3px black;
-    -webkit-box-shadow: 3px 3px 3px black;
-
-    margin-bottom: 20px;
 }
 
 li {
@@ -36,7 +49,7 @@ li {
 
 .social li {
 	padding-top: 7px;
-	margin-right:20px;
+	margin-right: 20px;
 }
 
 .social .fa-free-code-camp:hover {
@@ -55,7 +68,9 @@ li {
     color: #0094BC;
 }
 
-#jumbo {
+/* ================== ABOUT ================== */
+
+#about {
 	/* Background Colors */
 	background: white;
     background: -webkit-linear-gradient(white, #D1CECE); /* For Safari 5.1 to 6.0 */
@@ -63,41 +78,82 @@ li {
     background: -moz-linear-gradient(white, #D1CECE); /* For Firefox 3.6 to 15 */
     background: linear-gradient(white, #D1CECE); /* Standard syntax */
 
-	/* Border and Shadow */
-	border: 1px solid black;
+    padding-top: 37.5px;
+    padding-bottom: 37.5px;
 
-	box-shadow: 3px 3px 3px black;
-	-moz-box-shadow: 3px 3px 3px black;
-    -webkit-box-shadow: 3px 3px 3px black;
-
-    padding-top: 45px;
-    padding-bottom: 45px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.jumboRow {
-	display: flex;
+.display-3 {
+	max-width: 400px;
+}
+
+.btn-green {
+	background: #579647; 
+    color: #ffffff;
+    border-color: #579647;
+}
+
+.btn-green:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #305A3F;
+    border-color: #305A3F; 
 }
 
 #me {
+	max-height: 100%;
+  	max-width: 100%;
 	border-radius: 50%;
-	width: auto;
-
-	box-shadow: 3px 3px 3px black;
-	-moz-box-shadow: 3px 3px 3px black;
-    -webkit-box-shadow: 3px 3px 3px black;
-
-    position:absolute;
-    top:0;
-    bottom:0;
-    margin:auto;
+	border: 0;
 }
 
-.imageContainer {
-	margin-left: 20px; 
-	padding: 0; 
+/* ================== PORTFOLIO ================== */
+
+.card {
+	border: 0;
+	max-width: 270px;
 }
 
-.card-deck-wrapper {
-	margin-top: 20px;
+.card img {
+	width: 100%;
+}
+
+.card-deck {
+	margin-bottom: 0;
+}
+
+.card-footer {
+	background: #FFFFFF;
+	position: absolute;
+	bottom:0;
+  	width:100%;
+}
+
+.bottom-border {
+	border-bottom: 1px solid black;
+}
+
+/* ================== FOOTER ================== */
+
+#footer {
+	color: white;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+#footer p {
+	
+}
+
+
+/* ================== MEDIA QUERIES ================== */
+
+@media (max-width: 768px) {
+	/* Center the profile image on mobile */
+	#me {
+    	display: block;
+    	float: none;
+    	margin: 0 auto;
+    	margin-bottom: 30px;
+    }
 }

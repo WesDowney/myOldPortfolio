@@ -1,36 +1,29 @@
 <!-- 
 
 ===============
-About Jumbotron
-===============
-
-make my profile image jump below on mobile. Flexbox is stopping it.
-update jumbotron button to green
-
-===============
-Portfolio
-===============
-Use this for enlarging images - https://github.com/fat/zoom.js/
-.img-thumbnail - bootstrap to give an outline to the thumbnails
-https://v4-alpha.getbootstrap.com/examples/album/
-
-===============
 Contact
 ===============
 Contact Form With JQuery Validation
-
-===============
-Footer
-===============
-Made with Coffee and Music
+Make it submit. Make the form disappear and say thank you.
 
 =================
 Finishing Touches
 =================
-Make sure nav links hop down to page sections
+15px margin left and right container?
+center cards on mobile
+spacing on cards on mobile
+
 Jquery Animations
 Check on iPhone
+Check on iPad
 Check on Chrome
+
+=================
+Nice to haves
+=================
+Align profile image right on desktop
+Make card heights work without <br>'s
+Add a few more portfolio items that can be viewed.
 
 -->
 
@@ -44,11 +37,8 @@ Check on Chrome
 
     <!-- Bootstrap v4.0.0-alpha.5 with Flexbot -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" > 
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.css" rel="stylesheet" > 
 
     <!-- Custom CSS --> 
     <link href="assets/css/custom.css" rel="stylesheet"> 
@@ -69,8 +59,8 @@ Check on Chrome
       <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
       <div class="collapse navbar-toggleable-md" id="navbarResponsive">
         <ul class="nav navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
 
         <ul class="nav navbar-nav float-lg-right social">
@@ -83,66 +73,231 @@ Check on Chrome
     </nav>
   </div>
 
-  <div class="row jumboRow">
-    <div class="col-xs col-md-8 jumbotron" id="jumbo">
+  <div class="row">
+    <div class="col-xs-12 col-lg-8 jumbotron animated wobble" id="about">
       <h1 class="display-3">Hi, I'm Wes</h1>
       <p class="lead">I'm a web developer who enjoys building new things. </p>
       <hr class="my-2">
       <p>What idea are you looking to build? Lets chat.</p>
       <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Contact Me</a>
+        <a class="btn btn-lg btn-green" href="#contact" role="button">Contact Me</a>
       </p>
     </div>
 
-    <div class="col-xs col-md-4 imageContainer">
+    <div class="col-xs-12 col-lg-4">
       <img id="me" class="img-fluid img-thumbnail" src="assets/img/photo.jpg">
     </div>
   </div>
 
-  <div class="card-deck-wrapper">
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22255%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20255%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159525ecd4a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159525ecd4a%22%3E%3Crect%20width%3D%22255%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2293.921875%22%20y%3D%2296.0046875%22%3E255x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<!-- Portfolio Row 1 -->
+  <div class="row"> 
+    <h2 id="bolder-headline">Portfolio</h3>
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+
+        <div class="card"><a name="portfolio">
+          <img class="card-img-top bottom-border" src="assets/img/bttrboothsCallCenter.jpg" alt="BTTR Booths Call Center">
+          <div class="card-block">
+            <h4 class="card-title">BTTR Booths Call Center</h4>
+            <p class="card-text">Form for outbound sales that saves to database. Reports are generated on another page from the data. Graphic art by <a href="http://www.td-portfolio.com" target="_blank">Timothy Derouin</a>.
+            <p class="card-text"><small class="text-muted">HTML, CSS, Bootstrap, MySQL</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled">Private Project</a>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22255%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20255%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159525ecd4a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159525ecd4a%22%3E%3Crect%20width%3D%22255%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2293.921875%22%20y%3D%2296.0046875%22%3E255x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/incentive-admin.jpg" alt="Incentive Site Admin">
+          <div class="card-block">
+            <h4 class="card-title">Incentive Site Admin</h4>
+            <p class="card-text">Admin panel for loading advertisers and offers into a custom incentive site.</p>
+            <p class="card-text"><small class="text-muted">PHP, MySQL, HTML, CSS, Bootstrap</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled">Private Project</a>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22255%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20255%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159525ecd4a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159525ecd4a%22%3E%3Crect%20width%3D%22255%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2293.921875%22%20y%3D%2296.0046875%22%3E255x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/publisherrevEmail.jpg" alt="Email Templates">
+          <div class="card-block">
+            <h4 class="card-title">PublisherRev Email Template</h4>
+            <p class="card-text">Email template for sending offer updates to affiliates.
+            <p class="card-text"><small class="text-muted">MJML Framework, Photoshop</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled">Private Project</a>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22255%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20255%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_159525ecd4a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_159525ecd4a%22%3E%3Crect%20width%3D%22255%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2293.921875%22%20y%3D%2296.0046875%22%3E255x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/offerImporter.jpg" alt="Offer Importer">
+          <div class="card-block">
+            <h4 class="card-title">Offer Importer</h4>
+            <p class="card-text">Admin interface to pull affiliate offers from an advertiser on HasOffers to your HasOffers platfrom via API. 
+            <p class="card-text"><small class="text-muted">PHP, MySQL, HTML, CSS, Bootstrap, HasOffers API</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled">Private Project</a>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 
+<!-- Portfolio Row 2 -->
+
+  <div class="row">
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+
+        <div class="card">
+          <img class="card-img-top" src="assets/img/offerChecker.jpg" alt="Offer Checker">
+          <div class="card-block">
+            <h4 class="card-title">Offer Checker</h4>
+            <p class="card-text">Automatically checks advertiser API to see if offers are live and pauses them if they aren't.</p>
+            <p class="card-text"><small class="text-muted">PHP, MySQL, HasOffers API</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled">Private Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="assets/img/advertiserAPI.jpg" alt="Advertiser APIs">
+          <div class="card-block">
+            <h4 class="card-title">Advertiser Offer APIs</h4>
+            <p class="card-text">Automatically import all offers from a custom advertiser API, remove duplicates, format, add app store icons, update payouts and pause as needed.</p>
+            <p class="card-text"><small class="text-muted">PHP, Custom Advertiser APIs, HasOffers API, iTunes API</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled">Private Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/clickTracker.jpg" alt="Click Manager">
+          <div class="card-block">
+            <h4 class="card-title">Click Tracker</h4>
+            <p class="card-text">Simple click tracker to save some details about a click to a database and redirect the user to the appropriate offer.</p>
+            <p class="card-text"><small class="text-muted">PHP, MySQL</small><br><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled" target="_blank">Private Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/mobileDuplicate.jpg" alt="Mobile Duplicate Checker">
+          <div class="card-block">
+            <h4 class="card-title">Mobile Duplicate Checker</h4>
+            <p class="card-text">Algorithm that determines if an offer is a duplicate based on the unique combination of app store ID, conversion point, country targeting, allowed promotions and payout. </p>
+            <p class="card-text"><small class="text-muted">PHP, HasOffers API</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled" >Private Project</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Portfolio Row 3 -->
+
+  <div class="row">
+    <div class="card-deck-wrapper"> 
+      <div class="card-deck">
+
+        <div class="card">
+          <img class="card-img-top" src="assets/img/elonmusk.jpg" alt="Elon Musk">
+          <div class="card-block">
+            <h4 class="card-title">Elon Musk Tribute</h4>
+            <p class="card-text">A timeline of Elon Musk's life and businesses.</p>
+            <p class="card-text"><small class="text-muted">HTML, CSS, BootStrap</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="http://codepen.io/wesdowney/pen/Pbepwj" class="btn btn-green btn-block" target="_blank">View</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/voluumToHasOffers.jpg" alt="Voluum to HasOffers">
+          <div class="card-block">
+            <h4 class="card-title">Voluum 2 HasOffers</h4>
+            <p class="card-text">A script to send clicks through Voluum while conversions still post to HasOffers for a <strong>20X</strong> click cost savings.</p>
+            <p class="card-text"><small class="text-muted">PHP, Voluum, HasOffers API</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled" >Private Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/capManager.jpg" alt="Cap Manager">
+          <div class="card-block">
+            <h4 class="card-title">Cap Manager</h4>
+            <p class="card-text">Admin interface to manage ad budgets. When one daily budget is filled, a similar ad replaces it.</p>
+            <p class="card-text"><small class="text-muted">PHP, MySQL, HTML, Bootstrap, HasOffers API</small><br><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled" target="_blank">Private Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top bottom-border" src="assets/img/hasoffersAPI.jpg" alt="HasOffers API Wrapper">
+          <div class="card-block">
+            <h4 class="card-title">HasOffers API Wrapper</h4>
+            <p class="card-text">A function for interacting with HasOffers API including a pause and retry if API limit reached and error handling.</p>
+            <p class="card-text"><small class="text-muted">PHP, HasOffers API</small><br><br><br></p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-green btn-block disabled" >Private Project</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 id="bolder-headline">Contact Me</h3>
+      <form action="#" method="post"><a name="contact">
+        <div class="form-group required">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="company" id="company" placeholder="Company" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" name="message" id="message" placeholder="Message ..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-green btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" id="footer">
+    <p>&copy; 2017 Wes Downey - Made with <i class="fa fa-lg fa-heart"></i>, <i class="fa fa-lg fa-coffee"></i> and <i class="fa fa-lg fa-music"></i>
+  </div>
+
+</div> <!-- container -->
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-  <script src="assets/js/custom.js"><script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 </html>
