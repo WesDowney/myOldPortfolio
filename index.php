@@ -1,7 +1,20 @@
 <?php 
 
-if (isset($_POST["submit"])) {
+if (!empty($_POST)) {
+  $name         = $_POST['name'];
+  $company      = $_POST['company'];
+  $contactEmail = $_POST['email'];
+  $message      = $_POST['message'];
+  $to           = 'wesdowney@gmail.com'; 
+  $subject      = 'Message from Portfolio';
+  $body         = "From: $name\n Company: $company\n E-Mail: $contactEmail\n Message: $message";
+  $from         = 'Wes Downey Portfolio';
 
+  if (mail ($to, $subject, $body, $from)) {
+    echo "<div class=\"alert alert-success\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Message Sent!</strong> Thank you for reaching out to me. I look forward to talking to you soon.</div>";
+  } else {
+    echo "<div class=\"alert alert-danger\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Sorry</strong> There was an error sending your message. </div>";
+  }
 }
 
 ?>
