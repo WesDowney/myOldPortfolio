@@ -82,11 +82,11 @@ if (!empty($_POST)) {
 
 <!-- Portfolio Row 1 -->
   <div class="row no-bottom-margin"> 
-    <h2 id="bolder-headline">Portfolio</h3>
+    <h2 class="fadeInBlock" id="bolder-headline">Portfolio</h3>
     <div class="card-deck-wrapper">
       <div class="card-deck">
 
-        <div class="card"><a name="portfolio">
+        <div class="card fadeInBlock"><a name="portfolio">
           <img class="card-img-top bottom-border" src="assets/img/bttrboothsCallCenter.jpg" alt="BTTR Booths Call Center">
           <div class="card-block">
             <h4 class="card-title">BTTR Booths Call Center</h4>
@@ -98,7 +98,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/incentive-admin.jpg" alt="Incentive Site Admin">
           <div class="card-block">
             <h4 class="card-title">Incentive Site Admin</h4>
@@ -110,7 +110,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/publisherrevEmail.jpg" alt="Email Templates">
           <div class="card-block">
             <h4 class="card-title">PublisherRev Email Template</h4>
@@ -122,7 +122,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/offerImporter.jpg" alt="Offer Importer">
           <div class="card-block">
             <h4 class="card-title">Offer Importer</h4>
@@ -144,7 +144,7 @@ if (!empty($_POST)) {
     <div class="card-deck-wrapper">
       <div class="card-deck">
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top" src="assets/img/offerChecker.jpg" alt="Offer Checker">
           <div class="card-block">
             <h4 class="card-title">Offer Checker</h4>
@@ -156,7 +156,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top" src="assets/img/advertiserAPI.jpg" alt="Advertiser APIs">
           <div class="card-block">
             <h4 class="card-title">Advertiser Offer APIs</h4>
@@ -168,7 +168,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/clickTracker.jpg" alt="Click Manager">
           <div class="card-block">
             <h4 class="card-title">Click Tracker</h4>
@@ -180,7 +180,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/mobileDuplicate.jpg" alt="Mobile Duplicate Checker">
           <div class="card-block">
             <h4 class="card-title">Mobile Duplicate Checker</h4>
@@ -202,7 +202,7 @@ if (!empty($_POST)) {
     <div class="card-deck-wrapper"> 
       <div class="card-deck">
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top" src="assets/img/elonmusk.jpg" alt="Elon Musk">
           <div class="card-block">
             <h4 class="card-title">Elon Musk Tribute</h4>
@@ -214,7 +214,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/voluumToHasOffers.jpg" alt="Voluum to HasOffers">
           <div class="card-block">
             <h4 class="card-title">Voluum 2 HasOffers</h4>
@@ -226,7 +226,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/capManager.jpg" alt="Cap Manager">
           <div class="card-block">
             <h4 class="card-title">Cap Manager</h4>
@@ -238,7 +238,7 @@ if (!empty($_POST)) {
           </div>
         </div>
 
-        <div class="card">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/hasoffersAPI.jpg" alt="HasOffers API Wrapper">
           <div class="card-block">
             <h4 class="card-title">HasOffers API Wrapper</h4>
@@ -256,7 +256,7 @@ if (!empty($_POST)) {
 
   <!-- Contact -->
 
-  <div class="row">
+  <div class="row fadeInBlock">
     <div class="col-md-6 offset-md-3">
       <h2 id="bolder-headline">Contact Me</h3><a name="contact">
       <form action="" method="post" id="contactme">
@@ -277,7 +277,7 @@ if (!empty($_POST)) {
     </div>
   </div>
 
-  <div class="row" id="footer">
+  <div class="row fadeInBlock" id="footer">
     <p>&copy; 2017 Wes Downey <br/> Made with <i class="fa fa-lg fa-heart"></i>, <i class="fa fa-lg fa-coffee"></i> and <i class="fa fa-lg fa-music"></i>
   </div>
 
@@ -353,6 +353,27 @@ $(document).ready(function() {
       this.submit();
     }
   });
+
+$(function() {
+    $(window).scroll( function(){
+       
+        $('.fadeInBlock').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+            bottom_of_window = bottom_of_window + 400;  
+          
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            }
+        }); 
+    
+    });
+});
 
 });
 </script>
