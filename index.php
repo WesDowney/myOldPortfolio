@@ -55,10 +55,10 @@ if (!empty($_POST)) {
         </ul>
 
         <ul class="nav navbar-nav float-lg-right social">
-          <li class="nav-item"><a class="nav-link" href="https://www.freecodecamp.com/wesdowney"><i class="fa fa-lg fa-free-code-camp"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://github.com/WesDowney"><i class="fa fa-lg fa-github"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://twitter.com/wesdowney"><i class="fa fa-lg fa-twitter"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/wesdowney"><i class="fa fa-lg fa-linkedin"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.freecodecamp.com/wesdowney" target="_blank"><i class="fa fa-lg fa-free-code-camp"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/WesDowney" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://twitter.com/wesdowney" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/wesdowney" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></li>
         </ul>
       </div>
     </nav>
@@ -69,7 +69,7 @@ if (!empty($_POST)) {
       <h1 class="display-3">Hi, I'm Wes</h1>
       <p class="lead">I'm a web developer who enjoys building new things. </p>
       <hr class="my-2">
-      <p>What idea are you looking to build? Lets chat.</p>
+      <p>What idea are you looking to build?</p>
       <p class="lead">
         <a class="btn btn-lg btn-green" href="#contact" role="button">Contact Me</a>
       </p>
@@ -278,7 +278,7 @@ if (!empty($_POST)) {
   </div>
 
   <div class="row" id="footer">
-    <p>&copy; 2017 Wes Downey - Made with <i class="fa fa-lg fa-heart"></i>, <i class="fa fa-lg fa-coffee"></i> and <i class="fa fa-lg fa-music"></i>
+    <p>&copy; 2017 Wes Downey <br/> Made with <i class="fa fa-lg fa-heart"></i>, <i class="fa fa-lg fa-coffee"></i> and <i class="fa fa-lg fa-music"></i>
   </div>
 
 </div> <!-- container -->
