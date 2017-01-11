@@ -76,17 +76,17 @@ if (!empty($_POST)) {
     </div>
 
     <div class="col-xs-12 col-lg-4">
-      <img id="me" class="img-fluid img-thumbnail" src="assets/img/photo.jpg">
+      <img id="me" class="img-fluid img-thumbnail" src="assets/img/photo.jpg" alt="Wes Downey">
     </div>
   </div>
 
 <!-- Portfolio Row 1 -->
   <div class="row no-bottom-margin"> 
-    <h2 class="fadeInBlock" id="bolder-headline">Portfolio</h3>
+    <h2 class="fadeInBlock bolder-headline" id="portfolio">Portfolio</h2>
     <div class="card-deck-wrapper">
       <div class="card-deck">
 
-        <div class="card fadeInBlock"><a name="portfolio">
+        <div class="card fadeInBlock">
           <img class="card-img-top bottom-border" src="assets/img/bttrboothsCallCenter.jpg" alt="BTTR Booths Call Center">
           <div class="card-block">
             <h4 class="card-title">BTTR Booths Call Center</h4>
@@ -258,8 +258,8 @@ if (!empty($_POST)) {
 
   <div class="row fadeInBlock">
     <div class="col-md-6 offset-md-3">
-      <h2 id="bolder-headline">Contact Me</h3><a name="contact">
-      <form action="" method="post" id="contactme">
+      <h2 class="bolder-headline" id="contact">Contact Me</h2>
+      <form action="#" method="post" id="contactme">
         <div class="form-group">
           <input type="text" class="form-control" name="name" id="name" placeholder="Name" autocomplete="off">
         </div>
