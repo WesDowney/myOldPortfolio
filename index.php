@@ -1,19 +1,21 @@
 <?php 
 
 if (!empty($_POST)) {
-  $name         = $_POST['name'];
-  $company      = $_POST['company'];
-  $contactEmail = $_POST['email'];
-  $message      = $_POST['message'];
-  $to           = 'wesdowney@gmail.com'; 
-  $subject      = 'Message from Portfolio';
-  $body         = "From: $name\n Company: $company\n E-Mail: $contactEmail\n Message: $message";
-  $from         = 'Wes Downey Portfolio';
+  if (!empty($_POST['name']) && !empty($_POST['company']) && !empty($_POST['email']) && !empty($_POST['message'])) {
+    $name         = $_POST['name'];
+    $company      = $_POST['company'];
+    $contactEmail = $_POST['email'];
+    $message      = $_POST['message'];
+    $to           = 'wesdowney@gmail.com'; 
+    $subject      = 'Message from Portfolio';
+    $body         = "From: $name\n Company: $company\n E-Mail: $contactEmail\n Message: $message";
+    $from         = 'Wes Downey Portfolio';
 
-  if (mail ($to, $subject, $body, $from)) {
-    echo "<div class=\"alert alert-success\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Message Sent!</strong> Thank you for reaching out to me. I look forward to talking to you soon.</div>";
-  } else {
-    echo "<div class=\"alert alert-danger\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Sorry</strong> There was an error sending your message. </div>";
+    if (mail ($to, $subject, $body, $from)) {
+      echo "<div class=\"alert alert-success\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Message Sent!</strong> Thank you for reaching out to me. I look forward to talking to you soon.</div>";
+    } else {
+      echo "<div class=\"alert alert-danger\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a><strong>Sorry</strong> There was an error sending your message. </div>";
+    }
   }
 }
 
@@ -288,6 +290,7 @@ if (!empty($_POST)) {
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
