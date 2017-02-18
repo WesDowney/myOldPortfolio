@@ -33,7 +33,7 @@ if (!empty($_POST)) {
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/animate.css" rel="stylesheet" /> 
     <link href="assets/css/custom.css" rel="stylesheet" /> 
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -272,6 +272,7 @@ if (!empty($_POST)) {
         <div class="form-group">
           <textarea class="form-control" rows="3" name="message" id="message" placeholder="Message ..."></textarea>
         </div>
+        <div class="g-recaptcha" data-sitekey="6LeSChYUAAAAAEwlk3C0X5Cju8cQ08kV92YMW-2E"></div>
         <button type="submit" class="btn btn-green btn-block">Submit</button>
       </form>
     </div>

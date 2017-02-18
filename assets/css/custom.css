@@ -140,7 +140,10 @@ li {
 
 /* ================== CONTACT ================== */
 
-
+.g-recaptcha > div {
+    margin: auto;
+    margin-bottom: 17px
+}
 
 /* ================== FOOTER ================== */
 
