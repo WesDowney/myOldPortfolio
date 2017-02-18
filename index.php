@@ -6,9 +6,10 @@ if (!empty($_POST)) {
     $company      = $_POST['company'];
     $contactEmail = $_POST['email'];
     $message      = $_POST['message'];
+    $ip           = $_SERVER['REMOTE_ADDR'];
     $to           = 'wesdowney@gmail.com'; 
     $subject      = 'Message from Portfolio';
-    $body         = "From: $name\n Company: $company\n E-Mail: $contactEmail\n Message: $message";
+    $body         = "From: $name\n Company: $company\n E-Mail: $contactEmail\n Message: $message\n Sent by IP: $ip";
     $from         = 'Wes Downey Portfolio';
 
     if (mail ($to, $subject, $body, $from)) {
