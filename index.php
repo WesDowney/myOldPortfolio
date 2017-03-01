@@ -60,6 +60,7 @@ if (!empty($_POST)) {
         <ul class="nav navbar-nav float-lg-right social">
           <li class="nav-item"><a class="nav-link" href="https://www.freecodecamp.com/wesdowney" target="_blank"><i class="fa fa-lg fa-free-code-camp"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="https://github.com/WesDowney" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://codepen.io/wesdowney" target="_blank"><i class="fa fa-lg fa-codepen"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="https://twitter.com/wesdowney" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/wesdowney" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a></li>
         </ul>

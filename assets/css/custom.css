@@ -42,7 +42,6 @@ body {
 /* ================== NAV ================== */
 
 .navstyle {
-	/* Background Colors */
 	background: white;
     background: -webkit-linear-gradient(white, #D1CECE); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, #D1CECE); /* For Opera 11.1 to 12.0 */
@@ -69,7 +68,7 @@ li {
     color: #00ABE3;
 }
 
-.social .fa-github:hover {
+.social .fa-github:hover,  .social .fa-codepen:hover{
     color: #000000;
 }
 
@@ -80,7 +79,6 @@ li {
 /* ================== ABOUT ================== */
 
 #about {
-	/* Background Colors */
 	background: white;
     background: -webkit-linear-gradient(white, #D1CECE); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, #D1CECE); /* For Opera 11.1 to 12.0 */
