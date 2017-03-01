@@ -291,7 +291,7 @@ if (!empty($_POST)) {
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
+<script src="assets/js/index.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -301,97 +301,6 @@ if (!empty($_POST)) {
 
   ga('create', 'UA-90145405-1', 'auto');
   ga('send', 'pageview');
-
-</script>
-
-<script type="text/javascript">
-
-function validateEmail($email) {
-  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-  return emailReg.test($email);
-}
-
-$(document).ready(function() {
-
-  function addSuccess(that) {
-    $(that).removeClass("form-control-danger").parent().removeClass("has-danger");
-    $(that).addClass("form-control-success").parent().addClass("has-success");
-  }
-
-  function addDanger(that) {
-    $(that).removeClass("form-control-success").parent().removeClass("has-success");
-    $(that).addClass("form-control-danger").parent().addClass("has-danger");
-  }
-
-  // Validate as the user completes the form
-  $("input[type=text], textarea").on("input", function() {
-    if (this.id == "email"){
-      if ((this.value) && (validateEmail(this.value))) {
-          addSuccess(this);
-      }
-      else {
-        addDanger(this);
-      }
-    } 
-    else if (this.id != "company") {
-      if ($.trim(this.value).length) {
-        addSuccess(this);
-      } else {
-        addDanger(this);
-      }
-    } 
-  });
-
-  $('form').on('submit', function(event) {
-    event.preventDefault();
-    
-    var ready = 0;
-
-    if ($.trim($("#name").val()).length) {
-      ready++;
-    } else {
-      addDanger($("#name"));
-    }
-
-    if (($("#email").val()) && (validateEmail($("#email").val()))){
-      ready++;
-    } else {
-      addDanger($("#email"));
-    }
-
-    if ($.trim($("#message").val()).length) {
-      ready++;
-    } else {
-      addDanger($("#message"));
-    }
-    
-    if (ready === 3) {
-      this.submit();
-    }
-  });
-
-$(function() {
-    $(window).scroll( function(){
-       
-        $('.fadeInBlock').each( function(i){
-            
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
-            bottom_of_window = bottom_of_window + 400;  
-          
-            if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},500);
-                    
-            }
-        }); 
-    
-    });
-});
-
-});
 </script>
 
 </body>
